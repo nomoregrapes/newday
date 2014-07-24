@@ -1,0 +1,156 @@
+html {
+	width:100%
+	height:100%
+}
+body {
+	width:100%
+	height:100%
+	margin: 0;
+	background: #edd29b;
+}
+
+.topmenu {
+	width:100%;
+	height:40px;
+	margin: 0;
+	background: #f15c31;
+	color: #fff;
+}
+	.topmenu #home {
+		display:inline-block;
+		width: 40px;
+		height:40px;
+		margin: 0px 10px 0px 2px;
+		background: #45c5e8;
+		position:absolute;
+		
+		text-align:center;
+		vertical-align:middle;
+		font-size:1.6em;
+		font-weight:bold;
+	}
+	.topmenu #title {
+		display:inline-block;
+		height: 40px;
+		margin-left:60px;
+	}
+	.topmenu #title h1 {
+		display:inline-block;
+		position:absolute;
+		line-height:40px;
+		margin:0;
+		font-family: "Comic Sans MS", "Comic Sans" Monaco, monospace;
+	}
+	
+.subbuttons {
+	width:100%;
+	height: 62px;
+	vertical-align:bottom;
+	background: #f15c31; /* #45c5e8; */
+}
+	.subbuttons>div {
+		display: inline-block;
+		width: 60px;
+		height: 60px;
+		margin: 0px; padding:0px;
+		overflow: hidden;
+		/* margin: 3px 5px 0px 0px; */
+		background: #abdff4;
+	}
+	.subbuttons>div.current {
+		background: #45c5e8;
+	}
+		.subbuttons>div span {
+			display:none;
+		}
+		#btn-now {
+			background: url('images/btn-time-now.png');
+		}
+		#btn-now.current {
+			background: url('images/btn2-time-now.png');
+		}
+		#btn-today {
+			background: url('images/btn-time-today.png');
+		}
+		#btn-today.current {
+			background: url('images/btn2-time-today.png');
+		}
+		#btn-tomrw {
+			background: url('images/btn-time-tomorrow.png');
+		}
+		#btn-tomrw.current {
+			background: url('images/btn2-time-tomorrow.png');
+		}
+		#btn-etype-amseminar {
+			background: url('images/btn-time-amseminars.png');
+		}
+		#btn-etype-amseminar.current {
+			background: url('images/btn2-time-amseminars.png');
+		}
+		#btn-etype-freetime {
+			background: url('images/btn-time-freetime.png');
+		}
+		#btn-etype-freetime.current {
+			background: url('images/btn2-time-freetime.png');
+		}
+		#btn-etype-pmseminar {
+			background: url('images/btn-time-pmseminars.png');
+		}
+		#btn-etype-pmseminar.current {
+			background: url('images/btn2-time-pmseminars.png');
+		}
+		
+		#btn-vtype-mainvenue {
+			background: url('images/btn-venue-mainvenue.png');
+		}
+		#btn-vtype-mainvenue.current {
+			background: url('images/btn2-venue-mainvenue.png');
+		}
+		#btn-vtype-barn {
+			background: url('images/btn-venue-barn.png');
+		}
+		#btn-vtype-barn.current {
+			background: url('images/btn2-venue-barn.png');
+		}
+		#btn-vtype-amenity {
+			background: url('images/btn-venue-amenity.png');
+		}
+		#btn-vtype-amenity.current {
+			background: url('images/btn2-venue-amenity.png');
+		}
+		#btn-vtype-sport {
+			background: url('images/btn-venue-sport.png');
+		}
+		#btn-vtype-sport.current {
+			background: url('images/btn2-venue-sport.png');
+		}
+		#btn-vtype-church {
+			background: url('images/btn-venue-church.png');
+		}
+		#btn-vtype-church.current {
+			background: url('images/btn2-venue-church.png');
+		}
+		
+body p {
+	margin: 3px 10px 15px 10px;
+}
+body strong {
+	font-weight:bold;
+	color: #45c5e8;
+}
+
+ul.page-menu {
+	list-style-type: none;
+	margin: 5px 15px;
+	padding:0;
+}
+ul.page-menu li {
+	margin: 7px 0;
+	padding: 5px 10px;
+	background: #45c5e8;
+	border-top: 3px solid #abdff4;
+	border-left: 3px solid #abdff4;
+	border-bottom: 2px solid #0c8cb1;
+	border-right: 2px solid #0c8cb1;
+	cursor: pointer;
+}

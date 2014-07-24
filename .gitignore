@@ -1,0 +1,7 @@
+
+
+# Newday specific #
+#####################
+/server/dbconfig.php 	# don't commit your password!
+*~ 	#temp files on a linux system
+

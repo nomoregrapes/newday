@@ -1,0 +1,197 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- nothing to see here, I hid all the good stuff -->
+<head>
+	<title>Newday Site Map</title>
+	<style type="text/css">
+
+html, body {
+	height: 100%;
+}
+
+#map {
+    height: 95%;
+}
+
+#info {
+	height: 5%;
+}
+
+#areacolour {float:left; width:20px; min-height:70px;}
+#areainfo {position:absolute; margin-left:25px; width:250px;}
+#infowrap {border:3px solid black; visibility:none; min-height:70px}
+
+    </style>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    
+	<link rel="stylesheet" href="leaflet.css" />
+	<script src="leaflet.js"></script>
+
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> -->
+
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<script src="jquery.js"></script>
+<script src="general.js"></script>
+  </head>
+  <body>
+  	
+  	<div class="topmenu">
+  		<div id="home"><</div>
+		<div id="title"><h1>Newday Map</h1></div>
+	</div>
+	
+
+    <div id="map"></div>
+    
+    <script type="text/javascript">
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+        <!--
+        // complex map object
+		var map = new L.Map('map', {center: new L.LatLng(52.64905, 1.17722),zoom:17}); //default location, Newday
+		
+
+		//replace-with-your-api-key should be an API key to get Cloudmade tiles
+		var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/replace-with-your-api-key/997/256/{z}/{x}/{y}.png',
+			cloudmadeAttribution = 'Map data © 2011 OpenStreetMap contributors, Imagery © 2011 CloudMade',
+			cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttribution});
+		map.addLayer(cloudmade);
+
+
+
+		if (getUrlVars()["pointlat"] == null) {	
+			// comment out, so I can see the area
+	//		map.locate({setView: true, maxZoom: 17}); //new way
+			map.on('locationfound', onLocationFound);
+		    function onLocationFound(e) {
+				var radius = e.accuracy / 2;
+				//var marker = new L.Marker(e.latlng);
+				//map.addLayer(marker);
+				var circle = new L.Circle(e.latlng, radius);
+				map.addLayer(circle);
+				circle.bindPopup("You are within this circle (" + (radius * 2) + " meters wide)");//.openPopup();
+			}
+			map.on('locationerror', onLocationError);
+			function onLocationError(e) {	alert(e.message);	}
+		}
+			
+			//polygon styles
+/*			var defaultStyle = new OpenLayers.Style({fillOpacity:0.5, strokeWidth:0, fillColor: "${colour}",
+					label : "${name}",fontSize: "11px",fontFamily: "Courier New, monospace"
+			});
+*/
+
+			//add a requested marker
+
+			
+			//hardcoded locations
+			/*
+			var circleLocation = new L.LatLng(52.65003, 1.78647);
+			var circleOptions = {color: 'red',fillColor: '#f03',fillOpacity:0.5};
+			var circle = new L.CircleMarker( new L.LatLng(52.65003, 1.178647), {radius:50});//, circleOptions);
+			map.addLayer(circle);
+			*/
+			
+			/*
+			var markYellow5 = new L.Marker( new L.LatLng(52.65003, 1.178647) );
+			map.addLayer(markYellow5);
+			markYellow5.bindPopup('Durham');
+			*/
+			
+			var markGreen = new L.Polygon( [
+					new L.LatLng(52.651078, 1.1733),
+					new L.LatLng(52.651042, 1.176768),
+					new L.LatLng(52.649714, 1.176733),
+					new L.LatLng(52.649782, 1.173281)
+					], {stroke:false, fillColor:'#0f0'}  );
+			map.addLayer(markGreen);
+			markGreen.bindPopup("Green Zone");
+			
+			var markYellow5 = new L.Polygon( [
+					new L.LatLng(52.650321, 1.177973),
+					new L.LatLng(52.650334, 1.178416),
+					new L.LatLng(52.650109, 1.178354),
+					new L.LatLng(52.650093, 1.178882),
+					new L.LatLng(52.650318, 1.178826),
+					new L.LatLng(52.650315, 1.179317),
+					new L.LatLng(52.649684, 1.179282),
+					new L.LatLng(52.649700, 1.177965)
+					], {stroke:false, fillColor:'#fe0'}  );
+			map.addLayer(markYellow5);
+			markYellow5.bindPopup("Y5: Durham");
+			
+			var markBlue3 = new L.Polygon( [
+					new L.LatLng(52.648944, 1.175788),
+					new L.LatLng(52.648924, 1.176727),
+					new L.LatLng(52.648654, 1.176751),
+					new L.LatLng(52.648638, 1.176139),
+					new L.LatLng(52.648277, 1.176112),
+					new L.LatLng(52.648290, 1.175734)
+					], {stroke:false, fillColor:'#00f'}  );
+			map.addLayer(markBlue3);
+			markBlue3.bindPopup("B3: Glasgow");
+			
+			var markRed = new L.Polygon( [
+					new L.LatLng(52.64961, 1.177959),
+					new L.LatLng(52.64951, 1.18179),
+					new L.LatLng(52.64822, 1.18169),
+					new L.LatLng(52.64827, 1.17803)
+					], {stroke:false, fillColor:'#f00'}  );
+			map.addLayer(markRed);
+			markRed.bindPopup("Red Zone");
+			
+			var markPurple = new L.Polygon( [
+					new L.LatLng(52.648137, 1.177952),
+					new L.LatLng(52.648039, 1.181586),
+					new L.LatLng(52.647206, 1.181546),
+					new L.LatLng(52.64729, 1.17793)					
+					], {stroke:false, fillColor:'#a0a'}  );
+			map.addLayer(markPurple);
+			markPurple.bindPopup("Purple Zone");
+			
+			/*
+			var markPurple5 = new L.Marker( new L.LatLng(52.647205, 1.179779) );
+			map.addLayer(markPurple5);
+			markPurple5.bindPopup("Sunbury");
+			*/
+			
+ 
+			//saved polygons from xml (KML) files
+/*			
+			var layOther = new OpenLayers.Layer.GML("Non-camping", "newdayOther.xml", {format: OpenLayers.Format.KML, styleMap:defaultStyle, fillColor: "#FA7F05"});
+*/
+
+
+        // -->
+
+		if (getUrlVars()["pointlat"] != null) {
+			var markPointer = new L.Marker( new L.LatLng(getUrlVars()["pointlat"], getUrlVars()["pointlon"]) );
+				console.log('point to '+getUrlVars()["pointlat"] +','+ getUrlVars()["pointlon"]);
+				map.addLayer(markPointer);
+				markPointer.bindPopup(getUrlVars()["pointat"]);
+				map.setView( new L.LatLng(getUrlVars()["pointlat"], getUrlVars()["pointlon"]), 17 );
+		}
+		
+    </script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2841516-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+  </body>
+</html>
