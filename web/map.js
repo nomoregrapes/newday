@@ -5,7 +5,7 @@
 		function getStuffLocations() {
 			var data = 'bbox=' + map.getBounds().toBBoxString();
 			$.ajax({
-					url: 'photo-locations.xml',
+					url: 'data/camping-zones.geojson',
 					dataType: 'json',
 					data: data,
 					success: showLocations
@@ -51,7 +51,6 @@
 			var baseMaps = {
 				"Simple Map": MapboxLayer,
 			    "Thunderforest Outdoor Map": Thunderforest_Outdoors,
-				"MapQuest Open Aerial": MapQuestOpen_Aerial,
 			    "ESRI World Imagery": Esri_WorldImagery
 			};
 			L.control.layers(baseMaps).addTo(map);
