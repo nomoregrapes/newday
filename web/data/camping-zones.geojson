@@ -4,7 +4,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Zone 1"
+        "name": "Zone 1",
+        "cat": "green"
       },
       "geometry": {
         "type": "Polygon",
