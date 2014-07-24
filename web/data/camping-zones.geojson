@@ -38,7 +38,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Zone 2"
+        "name": "Zone 2", 
+        "cat": "purple" 
       },
       "geometry": {
         "type": "Polygon",
