@@ -28,19 +28,21 @@
 			//load map
 
 			map = L.map('map').setView([52.64905, 1.17722], 16); //default location, Newday
-			var MapboxLayer = L.tileLayer('http://{s}.tile.mapbox.com/v3/nomoregrapes.hg06ac3f/{z}/{x}/{y}.png', {
-				attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery Â© <a href="http://mapquest.com">MapQuest</a>',
-				maxZoom: 19
-			}).addTo(map);
 
 			//geolocate
 			//map.locate({setView: true, maxZoom: 19});
 
 			//more base layers
+			/*
+			var MapboxLayer = L.tileLayer('http://{s}.tile.mapbox.com/v3/nomoregrapes.hg06ac3f/{z}/{x}/{y}.png', {
+				attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery Â© <a href="http://mapquest.com">MapQuest</a>',
+				maxZoom: 19
+			}).addTo(map);
 			var Esri_WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
 				attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 			});
 			map.addLayer(Esri_WorldImagery);
+			*/
 
 			var Thunderforest_Outdoors = L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png', {
 				attribution: '&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
@@ -49,11 +51,11 @@
 
 			//add a layer switcher
 			var baseMaps = {
-				"Simple Map": MapboxLayer,
+				//"Simple Map": MapboxLayer,
 			    "Thunderforest Outdoor Map": Thunderforest_Outdoors,
-			    "ESRI World Imagery": Esri_WorldImagery
+			    //"ESRI World Imagery": Esri_WorldImagery
 			};
-			L.control.layers(baseMaps).addTo(map);
+			//L.control.layers(baseMaps).addTo(map);
 
 
 
