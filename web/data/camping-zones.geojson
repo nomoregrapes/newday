@@ -5,8 +5,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Zone 1",
-        "cat": "green"
+        "name": "Row 1",
+        "cat": "guessed"
       },
       "geometry": {
         "type": "Polygon",
@@ -39,8 +39,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Zone 2", 
-        "cat": "purple" 
+        "name": "Row 1", 
+        "cat": "guessed" 
       },
       "geometry": {
         "type": "Polygon",
