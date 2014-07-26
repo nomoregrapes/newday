@@ -15,63 +15,80 @@
 			lyrStuff.clearLayers();
 			lyrStuff.addData(ajaxresponse);
 			lyrStuff.eachLayer(function(layer) {
-				if (layer.toGeoJSON().properties.cat === 'green') {
-					layer.setStyle({
-						fillColor: "#4daf4a",
-						fillOpacity: 0.8,
-						stroke: false
-					})
-				}
-				else if (layer.toGeoJSON().properties.cat === 'blue') {
-					layer.setStyle({
-						fillColor: "#377eb8",
-						fillOpacity: 0.8,
-						stroke: false
-					})
-				}
-				else if (layer.toGeoJSON().properties.cat === 'red') {
-					layer.setStyle({
-						fillColor: "#e41a1c",
-						fillOpacity: 0.8,
-						stroke: false
-					})
-				}
-				else if (layer.toGeoJSON().properties.cat === 'purple') {
-					layer.setStyle({
-						fillColor: "#984ea3",
-						fillOpacity: 0.8,
-						stroke: false
-					})
-				}
-				else if (layer.toGeoJSON().properties.cat === 'yellow') {
-					layer.setStyle({
-						fillColor: "#ffff33",
-						fillOpacity: 0.8,
-						stroke: false
-					})
-				}
-				else if (layer.toGeoJSON().properties.cat === 'cafe') {
-					layer.setStyle({
-						fillColor: "#f781bf",
-						fillOpacity: 0.8,
-						stroke: false
-					})
-				}
-				else if (layer.toGeoJSON().properties.cat === 'venue') {
-					layer.setStyle({
-						fillColor: "#a65628",
-						fillOpacity: 0.8,
-						stroke: false
-					})
-				}
-				else {
-					layer.setStyle({
-						fillColor: "#999999",
-						fillOpacity: 0.8,
-						stroke: false
-					})
-				}
+				styleUpLayer(layer);
 			});
+
+			//as we don't have data, do this...
+			mixItUp();
+		}
+
+		/** caution, this function changes the data and then updates the style **/
+		function mixItUp() {
+			lyrStuff.eachLayer(function(layer) {
+				cats = ['green', 'blue', 'red', 'purple', 'yellow', 'cafe', 'venue', 'unknown'];
+				newcat = cats[Math.floor(Math.random()*cats.length)];
+				layer.toGeoJSON().properties.cat = newcat;
+				styleUpLayer(layer);
+			});
+		}
+
+		function styleUpLayer(layer) {
+			if (layer.toGeoJSON().properties.cat === 'green') {
+				layer.setStyle({
+					fillColor: "#4daf4a",
+					fillOpacity: 0.8,
+					stroke: false
+				})
+			}
+			else if (layer.toGeoJSON().properties.cat === 'blue') {
+				layer.setStyle({
+					fillColor: "#377eb8",
+					fillOpacity: 0.8,
+					stroke: false
+				})
+			}
+			else if (layer.toGeoJSON().properties.cat === 'red') {
+				layer.setStyle({
+					fillColor: "#e41a1c",
+					fillOpacity: 0.8,
+					stroke: false
+				})
+			}
+			else if (layer.toGeoJSON().properties.cat === 'purple') {
+				layer.setStyle({
+					fillColor: "#984ea3",
+					fillOpacity: 0.8,
+					stroke: false
+				})
+			}
+			else if (layer.toGeoJSON().properties.cat === 'yellow') {
+				layer.setStyle({
+					fillColor: "#ffff33",
+					fillOpacity: 0.8,
+					stroke: false
+				})
+			}
+			else if (layer.toGeoJSON().properties.cat === 'cafe') {
+				layer.setStyle({
+					fillColor: "#f781bf",
+					fillOpacity: 0.8,
+					stroke: false
+				})
+			}
+			else if (layer.toGeoJSON().properties.cat === 'venue') {
+				layer.setStyle({
+					fillColor: "#a65628",
+					fillOpacity: 0.8,
+					stroke: false
+				})
+			}
+			else {
+				layer.setStyle({
+					fillColor: "#999999",
+					fillOpacity: 0.8,
+					stroke: false
+				})
+			}
 		}
 		function attachClickEvent(feature, layer)
 		{
