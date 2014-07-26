@@ -272,7 +272,10 @@
     {"comment": "third row"},
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "Green 4",
+        "cat": "green"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
