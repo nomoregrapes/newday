@@ -310,7 +310,10 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "Green 5",
+        "cat": "green"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -341,7 +344,10 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "Green 6",
+        "cat": "green"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -574,7 +580,10 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "Green 3",
+        "cat": "green"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
