@@ -1,6 +1,7 @@
 
 		var map;
 		var lyrStuff;
+		var lyrLocation; var mrkLocation; var mrkLocationCircle;
 
 		function getStuffLocations() {
 			var data = 'bbox=' + map.getBounds().toBBoxString();
@@ -134,6 +135,25 @@
 			};
 			//L.control.layers(baseMaps).addTo(map);
 
+			//when we know where yu are
+			function onLocationFound(e) {
+				var radius = e.accuracy / 2;
+				if(mrkLocation == undefined) {
+					mrkLocation = L.marker(e.latlng).addTo(map);
+					mrkLocationCircle = L.circle(e.latlng, radius).addTo(map);
+				}
+				else {
+					mrkLocation.setLatLng(e.latlng);
+					mrkLocationCircle.setLatLng(e.latlng);
+					mrkLocationCircle.setRadius(radius);
+				}
+			}
+			map.on('locationfound', onLocationFound);
+
+			//every 5secs, find where you are
+			setInterval(function(){ 
+				map.locate({setView: false, maxZoom: 16});
+			}, 5000);
 
 
 var baseJson = {
