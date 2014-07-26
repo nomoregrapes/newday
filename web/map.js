@@ -25,10 +25,12 @@
 		/** caution, this function changes the data and then updates the style **/
 		function mixItUp() {
 			lyrStuff.eachLayer(function(layer) {
-				cats = ['green', 'blue', 'red', 'purple', 'yellow', 'cafe', 'venue', 'unknown'];
-				newcat = cats[Math.floor(Math.random()*cats.length)];
-				layer.toGeoJSON().properties.cat = newcat;
-				styleUpLayer(layer);
+				if(layer.toGeoJSON().properties.cat == null) {
+					cats = [/*'green', */'blue', 'red', 'purple', 'yellow', 'cafe', 'venue', 'unknown'];
+					newcat = cats[Math.floor(Math.random()*cats.length)];
+					layer.toGeoJSON().properties.cat = newcat;
+					styleUpLayer(layer);
+				}
 			});
 		}
 
