@@ -57,6 +57,21 @@
         ]
       }
     },
+    {
+      "type": "Feature",
+      "label": "Sports pitch, sports ground",
+      "properties": {
+        "name": "newday Sports"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1734127998352049,
+          52.64827114898338
+        ]
+      }
+    },
+    
 
     {"comment": "green zones"},
     {
