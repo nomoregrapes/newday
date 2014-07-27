@@ -273,7 +273,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Green 4",
+        "name": "Green 5",
         "cat": "green"
       },
       "geometry": {
@@ -311,7 +311,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Green 5",
+        "name": "Green 6",
         "cat": "green"
       },
       "geometry": {
@@ -345,7 +345,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Green 6",
+        "name": "Green 7",
         "cat": "green"
       },
       "geometry": {
@@ -378,7 +378,10 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "Green 8",
+        "cat": "green"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -409,7 +412,10 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "Yellow 4",
+        "cat": "yellow"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -448,7 +454,10 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "Yellow 5",
+        "cat": "yellow"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -479,7 +488,10 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "Yellow 6",
+        "cat": "yellow"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -614,7 +626,10 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "Green 4",
+        "cat": "green"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -645,7 +660,10 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "Yellow 1",
+        "cat": "yellow"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -676,7 +694,10 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "Yellow 2",
+        "cat": "yellow"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
