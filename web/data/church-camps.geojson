@@ -3,6 +3,64 @@
   "features": [
     {
       "type": "Feature",
+      "label": "Big Top main meetings 15-19s",
+      "properties": {
+        "name": "Big Top"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.177661418914795,
+          52.64620115759221
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "label": "12-14s",
+      "properties": {
+        "name": "12-14s"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1790990829467773,
+          52.64700182625964
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "label": "Kids Work, 3-4s, under 4s, 5-8s",
+      "properties": {
+        "name": "Kids Work"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1734342575073242,
+          52.64905225234691
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "label": "Site Office, Servers Office",
+      "properties": {
+        "name": "Site Office"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1734127998352049,
+          52.64827114898338
+        ]
+      }
+    },
+
+    {"comment": "green zones"},
+    {
+      "type": "Feature",
       "label": "Emmanuel Church Durham",
       "properties": {
         "name": "Emmanuel Church Durham",
