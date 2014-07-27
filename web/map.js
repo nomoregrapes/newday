@@ -2,6 +2,8 @@
 		var map;
 		var lyrStuff;
 		var lyrLocation; var mrkLocation; var mrkLocationCircle;
+		var markDest;
+		var lineSatnav;
 
 		function getStuffLocations() {
 			var data = 'bbox=' + map.getBounds().toBBoxString();
@@ -147,6 +149,7 @@
 					mrkLocationCircle.setLatLng(e.latlng);
 					mrkLocationCircle.setRadius(radius);
 				}
+				updateNavLine(e.latlng);
 			}
 			map.on('locationfound', onLocationFound);
 
@@ -154,7 +157,7 @@
 			setInterval(function(){ 
 				map.locate({setView: false, maxZoom: 16});
 			}, 5000);
-
+			map.locate({setView: false, maxZoom: 16});
 
 var baseJson = {
 	"type":"FeatureCollection",
@@ -184,4 +187,52 @@ var baseJson = {
 
 
 			getStuffLocations();
+
+			//get parameters from get url string
+			function getParameterByName(name) {
+				name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+				var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+					results = regex.exec(location.search);
+				return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+			}
+
+			//update a line between you and the destination
+			function updateNavLine(pointStart) {
+				if(locLine == true) {
+					pointEnd = L.latLng(locLat, locLon);
+					if(pointStart != null && pointEnd != null) {
+						var linePoints = [pointStart, pointEnd];
+						var polyline_options = {
+							color: '#000'
+						};
+						if(lineSatnav == undefined) {
+							lineSatnav = L.polyline(linePoints, polyline_options);
+							lineSatnav.addTo(map);
+						} else {
+							lineSatnav.setLatLngs(linePoints);
+						}
+					}
+				}
+			}
+
+			//deal with a search
+			if( window.location.search != null ) {
+				var locTitle = getParameterByName('title');
+				var locLat = getParameterByName('lat');
+				var locLon = getParameterByName('lon');
+				if(getParameterByName('drawline') == 'yes') {
+					var locLine = true;
+				}
+				if(locTitle != '') {
+					$('h1').text(locTitle);	
+				}
+				if(locLat != '' && locLon != '') {
+					markDest = L.marker([locLat, locLon]).addTo(map);
+					if(locLine != '')
+					{
+						//updateNavLine();
+					}
+				}
+			}
+			
 		});
