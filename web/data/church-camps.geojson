@@ -1,0 +1,94 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Emmanuel Church Durham",
+        "zone": "Green 1",
+        "ref": 97
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1724472045898438,
+          52.65096915104746
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hope Church Hartlepool",
+        "zone": "Green 1",
+        "ref": 555
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1725974082946777,
+          52.650965896621756
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "City Church Sheffield",
+        "zone": "Green 1",
+        "ref": 71
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1725866794586182,
+          52.650747849545986
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New Life Church, Rugby",
+        "zone": "Green 1",
+        "ref": 9190
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1729460954666138,
+          52.650962642195765
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jubilee Community Church Worthing",
+        "zone": "Green 1",
+        "ref": 41
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1729460954666138,
+          52.65076412175336
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Christchurch Newport",
+        "zone": "Green 1",
+        "ref": 9320},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.172940731048584,
+          52.650552582585156
+        ]
+      }
+    }
+  ]
+}
