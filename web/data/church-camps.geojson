@@ -3,6 +3,7 @@
   "features": [
     {
       "type": "Feature",
+      "label": "Emmanuel Church Durham",
       "properties": {
         "name": "Emmanuel Church Durham",
         "zone": "Green 1",
@@ -18,6 +19,7 @@
     },
     {
       "type": "Feature",
+      "label": "Hope Church Hartlepool",
       "properties": {
         "name": "Hope Church Hartlepool",
         "zone": "Green 1",
@@ -33,6 +35,7 @@
     },
     {
       "type": "Feature",
+      "label": "City Church Sheffield",
       "properties": {
         "name": "City Church Sheffield",
         "zone": "Green 1",
@@ -48,6 +51,7 @@
     },
     {
       "type": "Feature",
+      "label": "New Life Church, Rugby",
       "properties": {
         "name": "New Life Church, Rugby",
         "zone": "Green 1",
@@ -63,6 +67,7 @@
     },
     {
       "type": "Feature",
+      "label": "Jubilee Community Church Worthing",
       "properties": {
         "name": "Jubilee Community Church Worthing",
         "zone": "Green 1",
@@ -78,6 +83,7 @@
     },
     {
       "type": "Feature",
+      "label": "Christchurch Newport",
       "properties": {
         "name": "Christchurch Newport",
         "zone": "Green 1",

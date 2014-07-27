@@ -17,6 +17,10 @@
 </script>
 <link rel="stylesheet" type="text/css" href="styles.css" />
 <script src="jquery.js"></script>
+<!-- http://jqueryui.com/download/#!version=1.11.0&components=1101000000100010000000000000000000000 -->
+<script src="lib/jquery/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="lib/jquery/jquery-ui.min.css" />
+
 <script src="home.js"></script>
   </head>
   <body>
@@ -27,6 +31,9 @@
 	
 	<p id="news-feed">Welcome to the Newday Info App</p>
 	
+	Find: <input type="text" id="search" />
+	<ul class="page-menu search_results">
+	</ul>
 	<ul class="page-menu">
 		<!--
 		<li id="link-timetable">What's On</li>
