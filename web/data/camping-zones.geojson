@@ -138,7 +138,10 @@
     {"comment": "second row"},
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "Blue 1",
+        "cat": "blue"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -169,7 +172,10 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "Blue 2",
+        "cat": "blue"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
